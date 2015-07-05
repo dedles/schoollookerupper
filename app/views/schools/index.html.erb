@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Schools</h1>
+
+<table class="bordered striped responsive-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schools.each do |school| %>
+      <tr>
+        <td><%= school.name %></td>
+        <td><%= school.address %></td>
+        <td><%= school.phone %></td>
+        <td><%= school.website %></td>
+        <td> <!-- Dropdown Trigger -->
+				  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Options <i class="material-icons">swap_vert</i></a>
+
+				  <!-- Dropdown Structure -->
+				  <ul id='dropdown1' class='dropdown-content'>
+				    <li><%= link_to 'Show', school %></li>
+				    <li><%= link_to 'Edit', edit_school_path(school) %></li>
+				    <li><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+				  </ul>
+			  </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New School', new_school_path %>
