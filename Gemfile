@@ -14,6 +14,7 @@ gem 'materialize-sass'
 gem 'jquery-turbolinks'
 gem 'pry'
 gem 'pg', group: :production
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
