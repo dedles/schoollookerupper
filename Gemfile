@@ -12,7 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'materialize-sass'
 gem 'jquery-turbolinks'
-gem 'pry'
+gem 'pry-rails'
+gem 'carrierwave'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 

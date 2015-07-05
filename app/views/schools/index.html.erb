@@ -20,16 +20,9 @@
         <td><%= school.address %></td>
         <td><%= school.phone %></td>
         <td><%= school.website %></td>
-        <td> <!-- Dropdown Trigger -->
-				  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Options <i class="material-icons">swap_vert</i></a>
-
-				  <!-- Dropdown Structure -->
-				  <ul id='dropdown1' class='dropdown-content'>
-				    <li><%= link_to 'Show', school %></li>
-				    <li><%= link_to 'Edit', edit_school_path(school) %></li>
-				    <li><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-				  </ul>
-			  </td>
+        <td><%= link_to 'Show', school %></td>
+        <td><%= link_to 'Edit', edit_school_path(school) %></td>
+        <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -42,6 +42,11 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -86,6 +91,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -160,13 +167,14 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  carrierwave
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
   materialize-sass
   pg
-  pry
+  pry-rails
   rails (= 4.2.1)
   rails_12factor
   sass-rails (~> 5.0)
