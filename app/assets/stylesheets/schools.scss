@@ -9,3 +9,34 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+// .card-content {
+// 	background-color: #fdcda4;
+// }
+
+// .card-action {
+// 	background-color: #fdcda4;
+// }
+
+#card-list-item {
+	padding-top: 10px;
+}
+
+#index-card-links a {
+	color: #eeff41; // lime accent-1
+}
+
+
+nav {
+  .nav-wrapper {
+    .container {
+    	.brand-logo {
+    		// color: black;
+        font-size: 30px;
+        // font-weight: bold;
+				font-family: 'Racing Sans One', cursive;
+        // text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    	}
+    }
+  }
+}
