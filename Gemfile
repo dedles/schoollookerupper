@@ -16,6 +16,8 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
+gem "fog"
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
