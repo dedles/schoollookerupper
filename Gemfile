@@ -18,6 +18,7 @@ gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 gem "fog"
 gem 'figaro'
+gem "mini_magick"
 
 group :development, :test do
   gem 'byebug'
