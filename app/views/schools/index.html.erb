@@ -1,22 +1,22 @@
-
-<div class="row">
-  <div class="col s12 m12">
-    <div class="card blue lighten-2 center">
-      <div class="card-content white-text">
-        <span class="card-title"><h3>EDU Depot is the best source of reviews for all types of schools</h3></span>
-        <ul id="card-list-item">
-	        <li><h5>Explore schools from public to private, language and vocational.</h5></li>
-	        <li><h5>Leave reviews for your fellow students!</h5></li>
-        </ul>
-      </div>
-      <div id="index-card-links"class="card-action">
-        <%= link_to "LEARN MORE", pages_about_path %>
-        <a href="#">SIGN UP</a>
-      </div>
-    </div>
-  </div>
-</div>
-
+<% if !user_signed_in? %>
+	<div class="row">
+	  <div class="col s12 m12">
+	    <div class="card blue lighten-2 center">
+	      <div class="card-content white-text">
+	        <span class="card-title"><h3>EDU Depot is the best source of reviews for all types of schools</h3></span>
+	        <ul id="card-list-item">
+		        <li><h5>Explore schools from public to private, language and vocational.</h5></li>
+		        <li><h5>Leave reviews for your fellow students!</h5></li>
+	        </ul>
+	      </div>
+	      <div id="index-card-links"class="card-action">
+	        <%= link_to "LEARN MORE", pages_about_path %>
+	        <%= link_to "SIGN UP", new_user_registration_path %>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+<% end %>
 <table class="bordered striped responsive-table">
   <thead>
     <tr>
