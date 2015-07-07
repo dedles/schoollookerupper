@@ -1,24 +1,36 @@
+<div class="row">
+	
+</div>
+<div class="row">
+	<div class="col s12">
 
-<%= image_tag(@school.image_url) %>
-<p>
-  <strong>Name:</strong>
-  <%= @school.name %>
-</p>
+		<%= image_tag (@school.image_url), class: "responsive-img" %>
+		<p>
+		  <strong>Name:</strong>
+		  <%= @school.name %>
+		</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @school.address %>
-</p>
+		<p>
+		  <strong>Address:</strong>
+		  <%= @school.address %>
+		</p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @school.phone %>
-</p>
+		<p>
+		  <strong>Phone:</strong>
+		  <%= @school.phone %>
+		</p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @school.website %>
-</p>
-
-<%= link_to 'Edit', edit_school_path(@school) %> |
-<%= link_to 'Back', schools_path %>
+		<p>
+		  <strong>Website:</strong>
+		  <%= @school.website %>
+		</p>
+		<div class="row">
+			<%= link_to 'Write a Review', new_school_review_path(@school), class: "btn" %> 
+		</div>
+		<div class="row">
+			<%= link_to 'Edit', edit_school_path(@school) %> |
+			<%= link_to 'Back', schools_path %>
+		</div>
+		
+	</div>
+</div>
