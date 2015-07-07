@@ -14,8 +14,12 @@
 <%= render 'layouts/navbar' %>
 <main>
 	<div class="container">
-			<p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
+			<script>
+				Materialize.toast('<%= notice %>', 3000);
+				Materialize.toast('<%= alert %>', 3000);
+			</script>
+			<!-- <p class="alert"><%# alert %></p> -->
+			<!-- <p class="alert"><%# alert %></p> -->
 			<%= yield %>
 	</div>
 </main>
