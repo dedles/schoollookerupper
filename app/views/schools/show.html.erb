@@ -1,24 +1,63 @@
+<div class="row"></div>
 
-<%= image_tag(@school.image_url) %>
-<p>
-  <strong>Name:</strong>
-  <%= @school.name %>
-</p>
+<div class="row">
+	<div class="col s12 m4">
+		<%= image_tag (@school.image_url), class: "responsive-img" %>
+		
+		<h2><%= @school.name %></h2> 
 
-<p>
-  <strong>Address:</strong>
-  <%= @school.address %>
-</p>
+		<div class="star-rating" data-score= <%= @avg_rating %> ></div>
+		<p><%= "#{@reviews.length} reviews" %></p>
+		
+		<p>
+		  <strong>Address:</strong>
+		  <%= @school.address %>
+		</p>
+		<p>
+		  <strong>Phone:</strong>
+		  <%= @school.phone %>
+		</p>
+		<p>
+		  <strong>Website:</strong>
+		  <%= link_to @school.website, @school.website %>
+		</p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @school.phone %>
-</p>
+		<%= link_to 'Write a Review', new_school_review_path(@school), class: "btn" %> 
+	</div>
+	
 
-<p>
-  <strong>Website:</strong>
-  <%= @school.website %>
-</p>
+	<div class="col s12 m8">
+		<% if @reviews.blank? %>
+			<h3>No reviews yet. Be the first to write one!</h3>
+		<% else %>
+		<table>
+      
+        <tbody>
+					<% @reviews.each do |review| %>
+						<tr>
+							<td><div class="star-rating" data-score= <%= review.rating %> ></div>
+							<p><%= h(review.comment).gsub(/\n/, '<br>').html_safe %></p></td>
+		        </tr>
+					<% end %>
+        </tbody>
+      </table>
+		<% end %>
+	</div>
+	<div class="row">
+		<div class="col s12">
+			<%= link_to 'Edit', edit_school_path(@school) %> |
+			<%= link_to 'Back', schools_path %>			
+		</div>
+	</div>
 
-<%= link_to 'Edit', edit_school_path(@school) %> |
-<%= link_to 'Back', schools_path %>
+</div>
+
+<script>
+	$('.star-rating').raty({
+		path: "https://s3.amazonaws.com/edu-depot/stars",
+		readOnly: true,
+	  score: function() {
+	    return $(this).attr('data-score');
+  }
+	});
+</script>
