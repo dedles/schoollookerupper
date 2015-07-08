@@ -26,10 +26,10 @@
 		</div>
 
 		<div class="row">
-					<% if user_signed_in? && current_user.admin? %>
-						<%= link_to 'Edit', edit_school_path(@school) %> |
-					<% end %>
-					<%= link_to 'Back', schools_path %>		
+			<% if user_signed_in? && current_user.admin? %>
+				<%= link_to 'Edit', edit_school_path(@school) %> |
+			<% end %>
+				<%= link_to 'Back', schools_path %>		
 		</div>
 	</div>
 
@@ -60,10 +60,6 @@
 			          <td class="col s2 valign">
 				          <% if review.user.first_name.present? && review.user.last_name.present? %>
 										<%= "#{review.user.first_name.capitalize} #{review.user.last_name.capitalize[0]}." %>
-									<% elsif review.user.first_name.present? && review.user.last_name.blank? %>
-										<%= "#{review.user.first_name.capitalize}" %>	
-									<% else %>
-										<%= "#{review.user.email}" %>
 									<% end %>
 								</td>
 								<td class="col s2 valign"><%= review.created_at.strftime("%-m/%-d/%-y") %></td>

@@ -1,8 +1,15 @@
 class SchoolsController < ApplicationController
   before_action :set_school, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :check_user, except: [:index, :show, :new, :create]
+  before_action :authenticate_user!, except: [:search, :index, :show]
+  before_action :check_user, except: [:search, :index, :show, :new, :create]
 
+  def search
+  	if params[:search].present?
+  		@schools = School.search(params[:search])
+  	else
+  		@schools = School.all
+  	end
+  end
 
   # GET /schools
   # GET /schools.json

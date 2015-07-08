@@ -1,3 +1,23 @@
+<br>
+<!-- <div class="row">
+  <form>
+    <div class="input-field">
+      <input id="search" type="search" required>
+      <label for="search"><i class="material-icons">search</i></label>
+    </div>
+  </form>
+</div> -->
+
+<div class="row">
+	<div class="input-field">
+		<%= form_tag search_schools_path, method: :get do %>
+	    <%= text_field_tag :search, params[:search] %>
+	    <label for="search"><i class="material-icons">search</i></label>
+	    <%= submit_tag "Search", name: nil, style: "visibility: hidden;" %>
+		<% end %>	
+	</div>
+</div>
+
 <% if !user_signed_in? %>
 	<div class="row">
 	  <div class="col s12 m12">
