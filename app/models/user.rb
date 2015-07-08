@@ -5,4 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :reviews, dependent: :destroy
+  
+	validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[\w]+\z/i,
+		message: "must be in format: example@example.example" }
+
 end
+ 
