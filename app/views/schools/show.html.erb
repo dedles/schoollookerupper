@@ -57,7 +57,13 @@
 								<td class="col s2 valign"><%= review.created_at.strftime("%-m/%-d/%-y") %></td>
 		            <td class="col s6 valign">
 		            <div class="star-rating" data-score= <%= review.rating %> ></div>
-		            <%= h(review.comment).gsub(/\n/, '<br>').html_safe %></td>
+		            <%= h(review.comment).gsub(/\n/, '<br>').html_safe %>
+	          		<% if user_signed_in? %>
+									<% if (review.user == current_user) || (current_user.admin?) %>
+									  <%= link_to "Edit", edit_school_review_path(@school, review) %>
+									  <%= link_to "Delete", school_review_path(@school, review), method: :delete %>
+									<% end %>
+								<% end %></td>
 		          </tr>
 		        <% end %>
 	        </tbody>
