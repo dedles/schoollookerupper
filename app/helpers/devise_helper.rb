@@ -13,7 +13,7 @@ module DeviseHelper
 		      <h5>#{sentence}</h5>
 	    	</div>
 	      <div class="row">
-		      <div class="col s4">
+		      <div class="col s6">
 			      #{messages}
 		      </div>
 	      </div>
