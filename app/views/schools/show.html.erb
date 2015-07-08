@@ -21,34 +21,51 @@
 		  <strong>Website:</strong>
 		  <%= link_to @school.website, @school.website %>
 		</p>
-
-		<%= link_to 'Write a Review', new_school_review_path(@school), class: "btn" %> 
+		<div class="row">
+				<%= link_to 'Write a Review', new_school_review_path(@school), class: "btn" %> 
+		</div>
+		<div class="row">
+					<%= link_to 'Edit', edit_school_path(@school) %> |
+					<%= link_to 'Back', schools_path %>		
+		</div>
 	</div>
-	
 
 	<div class="col s12 m8">
 		<% if @reviews.blank? %>
 			<h3>No reviews yet. Be the first to write one!</h3>
 		<% else %>
-		<table>
-      
-        <tbody>
-					<% @reviews.each do |review| %>
-						<tr>
-							<td><div class="star-rating" data-score= <%= review.rating %> ></div>
-							<p><%= h(review.comment).gsub(/\n/, '<br>').html_safe %></p></td>
-		        </tr>
-					<% end %>
-        </tbody>
-      </table>
+		<table class="striped">
+	        <thead>
+	          <tr>
+	              <th class="col s2">Name</th>
+	              <th class="col s2">created at</th>
+	              <th class="col s6">review</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+		        <% @reviews.each do |review| %>
+		          <tr class="valign-wrapper">
+			          <td class="col s2 valign">
+				          <% if review.user.first_name.present? && review.user.last_name.present? %>
+										<%= "#{review.user.first_name.capitalize} #{review.user.last_name.capitalize[0]}." %>
+									<% elsif review.user.first_name.present? && review.user.last_name.blank? %>
+										<%= "#{review.user.first_name.capitalize}" %>	
+									<% else %>
+										<%= "#{review.user.email}" %>
+									<% end %>
+								</td>
+								<td class="col s2 valign"><%= review.created_at.strftime("%-m/%-d/%-y") %></td>
+		            <td class="col s6 valign">
+		            <div class="star-rating" data-score= <%= review.rating %> ></div>
+		            <%= h(review.comment).gsub(/\n/, '<br>').html_safe %></td>
+		          </tr>
+		        <% end %>
+	        </tbody>
+	      </table>
 		<% end %>
 	</div>
-	<div class="row">
-		<div class="col s12">
-			<%= link_to 'Edit', edit_school_path(@school) %> |
-			<%= link_to 'Back', schools_path %>			
-		</div>
-	</div>
+
+
 
 </div>
 
