@@ -9,7 +9,7 @@ module DeviseHelper
     html = <<-HTML
 	    <div id="error-content" class="card-panel red lighten-4">
 				<div class="row">
-		      <a id="button-dismiss"class="btn-floating btn-medium center teal lighten-3"><i class="material-icons">not_interested</i></a>
+		      <a id="button-dismiss"class="btn-floating btn-medium center teal lighten-3"><i class="mdi-alert-error"></i></a>
 		      <h5>#{sentence}</h5>
 	    	</div>
 	      <div class="row">

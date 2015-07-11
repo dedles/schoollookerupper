@@ -2,7 +2,7 @@
 	<% if @school.errors.any? %>
 	  <div id="error-content" class="card-panel red lighten-4">
 	    <div class="row">
-				<a id="button-dismiss"class="btn-floating btn-medium center teal lighten-3"><i class="material-icons">add</i></a>
+				<a id="button-dismiss"class="btn-floating btn-medium center teal lighten-3"><i class="mdi-alert-error"></i></a>
 	      <h5><%= pluralize(@school.errors.count, "error") %> prohibited this school from being saved:</h5>
 	    </div>
 	    <div class="col s4">
