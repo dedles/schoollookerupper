@@ -4,6 +4,14 @@ class PagesController < ApplicationController
 
   def contact
   end
+  
+  def search
+  	if params[:search].present?
+  		@schools = School.search(params[:search])
+  	else
+  		@schools = School.all
+  	end
+  end
 
   def home
   	@schools = School.all

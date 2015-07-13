@@ -24,6 +24,7 @@ gem 'searchkick'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'underscore-rails'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'
