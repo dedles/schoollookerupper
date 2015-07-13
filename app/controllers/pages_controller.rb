@@ -19,7 +19,7 @@ class PagesController < ApplicationController
 		  marker.lat school.latitude
 		  marker.lng school.longitude
 		  marker.infowindow "<strong>#{school.name}</strong> <br> #{school.address} <br> Phone: #{school.phone} 
-		  <br> #{school.description} <br> "
+		  <br> #{school.description} <br> #{view_context.link_to('Go to Page!', school_path(school.id))} "
 
 		end
   end
