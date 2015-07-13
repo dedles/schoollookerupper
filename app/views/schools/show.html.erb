@@ -21,6 +21,10 @@
 		  <strong>Website:</strong>
 		  <%= link_to @school.website, @school.website %>
 		</p>
+		<p>
+		  <strong>Description:</strong>
+		  <%=  "#{@school.description}, #{@school.description}" %>
+		</p>
 		<div class="row">
 				<%= link_to 'Write a Review', new_school_review_path(@school), class: "btn" %> 
 		</div>

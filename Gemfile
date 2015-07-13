@@ -21,6 +21,10 @@ gem 'figaro'
 gem "mini_magick"
 gem 'devise'
 gem 'searchkick'
+gem 'gmaps4rails'
+gem 'geocoder'
+gem 'underscore-rails'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'

@@ -15,6 +15,10 @@ class SchoolsController < ApplicationController
   # GET /schools.json
   def index
     @schools = School.all
+  		@hash = Gmaps4rails.build_markers(@schools) do |school, marker|
+			  marker.lat school.latitude
+			  marker.lng school.longitude
+		end
   end
 
   # GET /schools/1
@@ -85,7 +89,7 @@ class SchoolsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def school_params
-      params.require(:school).permit(:name, :address, :phone, :website, :image)
+      params.require(:school).permit(:name, :address, :phone, :website, :image, :latitude, :longitude, :description)
     end
 
     def check_user
