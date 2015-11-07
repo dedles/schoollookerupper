@@ -23,6 +23,7 @@ gem 'gmaps4rails'
 gem 'geocoder'
 gem 'underscore-rails'
 gem 'kaminari'
+gem 'puma'
 
 group :development, :test do
 	gem 'sqlite3'
