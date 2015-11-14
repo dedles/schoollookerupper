@@ -24,6 +24,7 @@ gem 'geocoder'
 gem 'underscore-rails'
 gem 'kaminari'
 gem 'puma'
+gem 'newrelic_rpm'
 
 group :development, :test do
 	gem 'sqlite3'
