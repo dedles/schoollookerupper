@@ -5,32 +5,32 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>www.schoollookerupper.com/</loc>
+  <loc>http://www.schoollookerupper.com/</loc>
   <changefreq>monthly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>www.schoollookerupper.com/about</loc>
+  <loc>http://www.schoollookerupper.com/about</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>www.schoollookerupper.com/contact</loc>
+  <loc>http://www.schoollookerupper.com/contact</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>www.schoollookerupper.com/users/sign_up</loc>
+  <loc>http://www.schoollookerupper.com/users/sign_up</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>www.schoollookerupper.com/users/sign_in</loc>
+  <loc>http://www.schoollookerupper.com/users/sign_in</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>www.schoollookerupper.com/schools</loc>
+  <loc>http://www.schoollookerupper.com/schools</loc>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
