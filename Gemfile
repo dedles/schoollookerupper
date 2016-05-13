@@ -27,7 +27,8 @@ gem 'puma'
 gem 'newrelic_rpm'
 
 group :development, :test do
-	gem 'sqlite3'
+	# gem 'sqlite3'
+	gem 'pg'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
