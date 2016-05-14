@@ -27,7 +27,8 @@ main {
 }
 
 #index-card-links a {
-	color: #eeff41; // lime accent-1
+	// color: $secondary-color;//#eeff41; // lime accent-1
+  color: #eeff41; // lime accent-1
 }
 
 
@@ -42,6 +43,13 @@ nav {
         // text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     	}
     }
+  }
+}
+#logo{
+  height: 72px;
+  @media(max-width:767px){
+    width:78px;
+    height: 47px;
   }
 }
 // #map-container {
@@ -61,3 +69,22 @@ nav {
 // #logo {
 // 	margin-top: 5px;
 // }
+// h2 .material-icons {
+//   font-size: 61px;
+// }
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+.orange {
+    background-color: #ff9800 !important;
+}
+footer.page-footer .footer-copyright1 {
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 0.8);
+}
