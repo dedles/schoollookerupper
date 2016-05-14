@@ -1,9 +1,9 @@
 class School < ActiveRecord::Base
 
 	searchkick
-
-	geocoded_by :address
-	after_validation :geocode
+	# 
+	# geocoded_by :address
+	# after_validation :geocode
 
 	mount_uploader :image, ImageUploader
 	has_many :reviews, dependent: :destroy
@@ -18,7 +18,7 @@ class School < ActiveRecord::Base
 	validates :address, format: { with: /\A\d+[^,]+,[^,]+, [A-Z]\D*\z/,
 	  message: "must be in the format: 'Number Street Name COMMA City COMMA Country (ex: 123 Fake St., Boston, USA) '" }
 
-	private	
+	private
 
   def picture_size
     if picture.size > 5.megabytes

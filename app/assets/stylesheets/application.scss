@@ -3,11 +3,8 @@
 // $primary-color: color("green", "lighten-2") !default;
 // $button-color: color("blue", "lighten-2") !default;
 
-$primary-color: color("blue", "darken-4") !default;
-$secondary-color: color("light-blue", "lighten-1") !default;
+$primary-color: color("light-blue", "lighten-1") !default;
+$secondary-color: #ff9800 !default;
 
 @import 'materialize';
 @import 'schools';
-
-
-
