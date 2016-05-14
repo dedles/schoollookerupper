@@ -1,5 +1,3 @@
-
-
 body {
   display: flex;
   min-height: 100vh;
@@ -10,17 +8,6 @@ main {
   flex: 1 0 auto;
 }
 
-// html {
-//   font-family: GillSans, Calibri, Trebuchet, sans-serif;
-// }
-
-// .card-content {
-// 	background-color: #fdcda4;
-// }
-
-// .card-action {
-// 	background-color: #fdcda4;
-// }
 
 #card-list-item {
 	padding-top: 10px;
@@ -31,26 +18,23 @@ main {
   color: #eeff41; // lime accent-1
 }
 
-
 nav {
   .nav-wrapper {
     .container {
     	.brand-logo {
-    		// color: black;
         font-size: 30px;
-        // font-weight: bold;
 				font-family: 'Racing Sans One', cursive;
-        // text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     	}
     }
   }
 }
 #logo{
-  height: 72px;
-  @media(max-width:767px){
-    width:78px;
-    height: 47px;
-  }
+  height: 66px;
+  // margin-left: 50px;
+}
+
+.yellow-link{
+  color: #eeff41
 }
 // #map-container {
 //    height: 400px;
@@ -66,12 +50,6 @@ nav {
 //    width: 100%;
 //  }
 
-// #logo {
-// 	margin-top: 5px;
-// }
-// h2 .material-icons {
-//   font-size: 61px;
-// }
 
 .icon-block {
   padding: 0 15px;
