@@ -36,6 +36,11 @@ nav {
 .yellow-link{
   color: #eeff41
 }
+
+.awesome-marker i {
+    font-size: 18px;
+    margin-top: 5px;
+}
 // #map-container {
 //    height: 400px;
 //    border-radius: 16px 16px;
@@ -65,4 +70,15 @@ footer.page-footer .footer-copyright1 {
     height: 50px;
     line-height: 50px;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.white-link{
+  color: #fff !important;
+}
+.yellow-link{
+  color: #eeff41;
+}
+
+#mapid {
+  height: 600px;
 }

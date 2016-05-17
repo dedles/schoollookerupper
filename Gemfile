@@ -26,15 +26,15 @@ gem 'kaminari'
 gem 'puma'
 gem 'newrelic_rpm'
 gem 'pg'
+gem 'font-awesome-sass'
+
 
 group :development, :test do
-	# gem 'sqlite3'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
 
 group :production do
-	# gem 'pg'
 	gem 'rails_12factor'
 end
