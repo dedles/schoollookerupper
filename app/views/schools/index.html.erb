@@ -1,8 +1,6 @@
-<br>
-
 <div class="col s12">
-
 	<div class="row">
+		<br>
 		<div class="input-field">
 			<%= form_tag search_schools_path, method: :get do %>
 		    <%= text_field_tag :search, params[:search] %>
@@ -18,7 +16,7 @@
 		    <tr>
 		      <th>Name</th>
 		      <th>Address</th>
-		      <th>Phone</th>
+		      <th>Phone <i class="fa fa-snapchat-ghost" aria-hidden="true"></i></th>
 		      <th>Website</th>
 		      <% if user_signed_in? && current_user.admin? %>
 			      <th colspan="2"></th>
@@ -45,8 +43,9 @@
 
 	<div class="row">
 		<%# image_tag "https://files.schoollookerupper.com/images/bigstock-Desktop-With-Technology-And-Sn-104721035.jpg", class: "responsive-img" %>
-		<%= image_tag "https://s3.amazonaws.com/files.schoollookerupper.com/images/bigstock-Closeup-of-a-teachers-desk-wit-96764204.jpg", class: "responsive-img" %>
+		<%# image_tag "https://s3.amazonaws.com/files.schoollookerupper.com/images/bigstock-Closeup-of-a-teachers-desk-wit-96764204.jpg", class: "responsive-img" %>
 		<%# image_tag "https://s3.amazonaws.com/files.schoollookerupper.com/images/bigstock-Apple-and-stack-of-books-70642945.jpg", class: "responsive-img" %>
+		<div id="mapid"></div>
 
 	</div>
 </div>
