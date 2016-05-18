@@ -10,7 +10,11 @@
 		</div>
 		<div id="index-card-links"class="card-action">
 			<%= link_to "LEARN MORE", pages_about_path, class: 'white-link' %>
-			<%= link_to "SIGN UP", new_user_registration_path, class: 'white-link' %>
+			<% if !user_signed_in? %>
+				<%= link_to "SIGN UP", new_user_registration_path, class: 'white-link' %>
+			<% else %>
+				<%= link_to "LIST A SCHOOL", new_school_path, class: 'white-link' %>
+			<% end %>
 		</div>
 	</div>
 </div>

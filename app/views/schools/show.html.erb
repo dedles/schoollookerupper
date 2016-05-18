@@ -33,7 +33,7 @@
 			<% if user_signed_in? && current_user.admin? %>
 				<%= link_to 'Edit', edit_school_path(@school) %> |
 			<% end %>
-				<%= link_to 'Back', schools_path %>		
+				<%= link_to 'Back', schools_path, data: {no_turbolink: true} %>		
 		</div>
 	</div>
 
